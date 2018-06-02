@@ -34,6 +34,9 @@ Offer an easy way to manage users.
 
 To get started, I followed this [step-by-step guide](https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb) by [Christopher Buecheler](https://closebrace.com/u/cwbuecheler) to getting up and running with Node.js, Express and MongoDB. I opted to use MySQL.
 
+
+- You can navigate to [http://localhost:3000/users/userlist](http://localhost:3000/users/userlist) where you will find the JSON output of all the users in the database. 
+
 ### 3. Challenges and successes
 
 Some challenges included...

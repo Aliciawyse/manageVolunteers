@@ -1,0 +1,26 @@
+//This is another template that holds
+//the HTML we need for the web app
+extends layout
+
+block content
+  header
+    h1.is-size-2 Welcome to the volunteer management app!
+
+  //p If you take a look at #[a(target="_blank", href="http://localhost:3000/users/userlist") this page], you'll see several records of people.
+
+  section
+    section
+      h1.is-size-4 Filter or search data:
+      div.field.is-grouped
+        form
+          input.input(type="text", placeholder="search", name="username")
+          p.control
+            a.button.is-info(type="submit") search
+
+
+    section
+      h1.is-size-4 Add a new user:
+      form#formAddUser(name="adduser",method="post",action="/adduser")
+        input.input#inputUserName(type="text", placeholder="first name", name="username")
+        input.input#inputUserEmail(type="text", placeholder="email address", name="useremail")
+        button.button.is-primary#btnSubmit(type="submit") submit

@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h1= title
+  h1.is-size-3 Add a new user!
   form#formAddUser(name="adduser",method="post",action="/adduser")
-    input#inputUserName(type="text", placeholder="username", name="username")
-    input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-    button#btnSubmit(type="submit") submit
+    input.input#inputUserName(type="text", placeholder="first name", name="username")
+    input.input#inputUserEmail(type="text", placeholder="email address", name="useremail")
+    button.button.is-primary#btnSubmit(type="submit") submit

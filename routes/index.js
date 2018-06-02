@@ -1,34 +1,43 @@
+// ==============================================================================
+// DEPENDENCIES
+// ==============================================================================
 var express = require('express');
 var router = express.Router();
 
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+// ===============================================================================
+// ROUTING
+// HTML GET Request. The code below handles when users visit our home page
+// The user is shown the index.jade template
+// ===============================================================================
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', { title: 'volunteer management app' });
+});
+
 //
 // //GET hello world page
 // router.get('/helloworld', function(req,res){
 //   res.render('helloworld',{title: 'Hello World!'})
 // });
 
-/* GET Userlist page. */
+// /* GET Userlist page. */
 router.get('/userlist', function(req, res) {
 
   var connection = req.db;
 
+  //select all users from the database
     connection.query('SELECT * FROM volunteers', function(err, rows, fields) {
-        res.render('userlist', {
-            "userlist" : rows,
-        });
+        res.render('userlist', { "userlist" : rows,});
     });
 });
 
-/* GET New User page. */
+// /* GET New User page. */
 router.get('/newuser', function(req, res) {
     res.render('newuser', { title: 'Add New User' });
 });
 
-/* POST to Add User Service */
+// /* POST to Add User Service */
 router.post('/adduser', function(req, res) {
 
     // Set our internal DB variable

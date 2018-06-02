@@ -6,3 +6,15 @@ block content
   ul
   each item in userlist
     li #{item.firstName}
+
+  // USER LIST
+  #userList
+    h2 Complete list of users in database
+    table.table.is-bordered.is-striped.is-fullwidth
+      thead
+        th first_name
+        th email_address
+        th job_title
+      tbody
+
+  script(src='/javascripts/userPageInteractivity.js')
